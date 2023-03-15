@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uER-RA-Nvv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mine View Controller-->
+        <scene sceneID="TYO-fu-ILS">
+            <objects>
+                <viewController id="owr-iK-GGx" customClass="MineViewController" customModule="geekTime_swift_IB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Alc-on-gMM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-Jy-JoK">
+                                <rect key="frame" x="171.5" y="427.5" width="71" height="41.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="登录">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VN3-Ns-ITR" kind="push" id="zvI-n7-9Lg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3TT-gk-g3w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aiQ-Jy-JoK" firstAttribute="centerX" secondItem="Alc-on-gMM" secondAttribute="centerX" id="MfM-7Z-7Wm"/>
+                            <constraint firstItem="aiQ-Jy-JoK" firstAttribute="centerY" secondItem="Alc-on-gMM" secondAttribute="centerY" id="hCK-rM-wpu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZGH-pm-lgb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lU9-9V-KtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073.913043478261" y="43.526785714285715"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="9cu-fi-30s">
+            <objects>
+                <viewController id="VN3-Ns-ITR" customClass="LoginViewController" customModule="geekTime_swift_IB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RCA-O1-FKw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YK3-nk-NbI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UFN-6U-0AN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTU-lt-kz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="44"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="VEK-y6-xVw">
+            <objects>
+                <viewController id="jMV-RA-utK" customClass="HomeViewController" customModule="geekTime_swift_IB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aTl-j8-r7e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WFi-Oy-7Cj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="home" selectedImage="home_selected" id="Orc-ep-30l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZA-nz-QPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="-633"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="nK5-Hr-Yba">
+            <objects>
+                <tabBarController id="uER-RA-Nvv" customClass="MainViewController" customModule="geekTime_swift_IB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QJa-hD-FMm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jMV-RA-utK" kind="relationship" relationship="viewControllers" id="vCc-cq-FmF"/>
+                        <segue destination="A1m-pK-bHH" kind="relationship" relationship="viewControllers" id="VKu-xL-xxq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QcA-dK-2fS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="-329"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="xTH-qb-v2p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A1m-pK-bHH" customClass="BaseNavigationController" customModule="geekTime_swift_IB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="mine" selectedImage="mine_selected" id="3At-nP-GwQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HUz-a3-AAd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="owr-iK-GGx" kind="relationship" relationship="rootViewController" id="eFn-2U-Odl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZY-cI-vK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163.768115942029" y="43.526785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="home_selected" width="24" height="24"/>
+        <image name="mine" width="24" height="24"/>
+        <image name="mine_selected" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		836A1CBF29C1A689002C568A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1CBE29C1A689002C568A /* AppDelegate.swift */; };
 		836A1CC129C1A689002C568A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1CC029C1A689002C568A /* SceneDelegate.swift */; };
-		836A1CC329C1A689002C568A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1CC229C1A689002C568A /* ViewController.swift */; };
 		836A1CC629C1A689002C568A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836A1CC429C1A689002C568A /* Main.storyboard */; };
 		836A1CC829C1A68B002C568A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836A1CC729C1A68B002C568A /* Assets.xcassets */; };
 		836A1CCB29C1A68B002C568A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836A1CC929C1A68B002C568A /* LaunchScreen.storyboard */; };
+		836A1CFF29C1BA1F002C568A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1CFE29C1BA1F002C568A /* BaseViewController.swift */; };
+		836A1D0129C1BA33002C568A /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0029C1BA33002C568A /* BaseModel.swift */; };
+		836A1D0329C1BA8D002C568A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0229C1BA8D002C568A /* LoginViewController.swift */; };
+		836A1D0529C1BAE3002C568A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0429C1BAE3002C568A /* MainViewController.swift */; };
+		836A1D0D29C1BD50002C568A /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0C29C1BD50002C568A /* MineViewController.swift */; };
+		836A1D0F29C1BD5D002C568A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0E29C1BD5D002C568A /* HomeViewController.swift */; };
+		836A1D1129C1D199002C568A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D1029C1D199002C568A /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		836A1CBB29C1A689002C568A /* geekTime_swift_IB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geekTime_swift_IB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836A1CBE29C1A689002C568A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836A1CC029C1A689002C568A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		836A1CC229C1A689002C568A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		836A1CC529C1A689002C568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		836A1CC729C1A68B002C568A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		836A1CCA29C1A68B002C568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836A1CCC29C1A68B002C568A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836A1CFE29C1BA1F002C568A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		836A1D0029C1BA33002C568A /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		836A1D0229C1BA8D002C568A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		836A1D0429C1BAE3002C568A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		836A1D0C29C1BD50002C568A /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		836A1D0E29C1BD5D002C568A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		836A1D1029C1D199002C568A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,133 @@
 		836A1CBD29C1A689002C568A /* geekTime_swift_IB */ = {
 			isa = PBXGroup;
 			children = (
-				836A1CBE29C1A689002C568A /* AppDelegate.swift */,
-				836A1CC029C1A689002C568A /* SceneDelegate.swift */,
-				836A1CC229C1A689002C568A /* ViewController.swift */,
-				836A1CC429C1A689002C568A /* Main.storyboard */,
-				836A1CC729C1A68B002C568A /* Assets.xcassets */,
-				836A1CC929C1A68B002C568A /* LaunchScreen.storyboard */,
+				836A1CF629C1B76E002C568A /* Module<模块类> */,
+				836A1CF729C1B7BC002C568A /* Component<组件类> */,
+				836A1CF529C1B763002C568A /* Tools<工具类> */,
+				836A1CF429C1B743002C568A /* Extensions<扩展类> */,
+				836A1CF329C1B615002C568A /* Resource<资源类> */,
+				836A1CFC29C1B8DE002C568A /* Application<应用入口> */,
 				836A1CCC29C1A68B002C568A /* Info.plist */,
 			);
 			path = geekTime_swift_IB;
+			sourceTree = "<group>";
+		};
+		836A1CF229C1B5A3002C568A /* ViewController<视图控制器类> */ = {
+			isa = PBXGroup;
+			children = (
+				836A1D0429C1BAE3002C568A /* MainViewController.swift */,
+			);
+			path = "ViewController<视图控制器类>";
+			sourceTree = "<group>";
+		};
+		836A1CF329C1B615002C568A /* Resource<资源类> */ = {
+			isa = PBXGroup;
+			children = (
+				836A1CC729C1A68B002C568A /* Assets.xcassets */,
+			);
+			path = "Resource<资源类>";
+			sourceTree = "<group>";
+		};
+		836A1CF429C1B743002C568A /* Extensions<扩展类> */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Extensions<扩展类>";
+			sourceTree = "<group>";
+		};
+		836A1CF529C1B763002C568A /* Tools<工具类> */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools<工具类>";
+			sourceTree = "<group>";
+		};
+		836A1CF629C1B76E002C568A /* Module<模块类> */ = {
+			isa = PBXGroup;
+			children = (
+				836A1CF829C1B7EA002C568A /* MainModule */,
+				836A1D0629C1BAF7002C568A /* HomeModule */,
+				836A1D0729C1BB07002C568A /* MineModule */,
+				836A1CFD29C1B93A002C568A /* BaseModule */,
+			);
+			path = "Module<模块类>";
+			sourceTree = "<group>";
+		};
+		836A1CF729C1B7BC002C568A /* Component<组件类> */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Component<组件类>";
+			sourceTree = "<group>";
+		};
+		836A1CF829C1B7EA002C568A /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				836A1CF229C1B5A3002C568A /* ViewController<视图控制器类> */,
+				836A1CFA29C1B82D002C568A /* VIew<视图类> */,
+				836A1CFB29C1B841002C568A /* Model<数据模型类> */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		836A1CF929C1B812002C568A /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				836A1D0229C1BA8D002C568A /* LoginViewController.swift */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		836A1CFA29C1B82D002C568A /* VIew<视图类> */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "VIew<视图类>";
+			sourceTree = "<group>";
+		};
+		836A1CFB29C1B841002C568A /* Model<数据模型类> */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model<数据模型类>";
+			sourceTree = "<group>";
+		};
+		836A1CFC29C1B8DE002C568A /* Application<应用入口> */ = {
+			isa = PBXGroup;
+			children = (
+				836A1CBE29C1A689002C568A /* AppDelegate.swift */,
+				836A1CC029C1A689002C568A /* SceneDelegate.swift */,
+				836A1CC429C1A689002C568A /* Main.storyboard */,
+				836A1CC929C1A68B002C568A /* LaunchScreen.storyboard */,
+			);
+			path = "Application<应用入口>";
+			sourceTree = "<group>";
+		};
+		836A1CFD29C1B93A002C568A /* BaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				836A1CFE29C1BA1F002C568A /* BaseViewController.swift */,
+				836A1D1029C1D199002C568A /* BaseNavigationController.swift */,
+				836A1D0029C1BA33002C568A /* BaseModel.swift */,
+			);
+			path = BaseModule;
+			sourceTree = "<group>";
+		};
+		836A1D0629C1BAF7002C568A /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				836A1D0E29C1BD5D002C568A /* HomeViewController.swift */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		836A1D0729C1BB07002C568A /* MineModule */ = {
+			isa = PBXGroup;
+			children = (
+				836A1CF929C1B812002C568A /* LoginModule */,
+				836A1D0C29C1BD50002C568A /* MineViewController.swift */,
+			);
+			path = MineModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836A1CC329C1A689002C568A /* ViewController.swift in Sources */,
 				836A1CBF29C1A689002C568A /* AppDelegate.swift in Sources */,
 				836A1CC129C1A689002C568A /* SceneDelegate.swift in Sources */,
+				836A1D0129C1BA33002C568A /* BaseModel.swift in Sources */,
+				836A1D0F29C1BD5D002C568A /* HomeViewController.swift in Sources */,
+				836A1D0D29C1BD50002C568A /* MineViewController.swift in Sources */,
+				836A1D1129C1D199002C568A /* BaseNavigationController.swift in Sources */,
+				836A1D0529C1BAE3002C568A /* MainViewController.swift in Sources */,
+				836A1D0329C1BA8D002C568A /* LoginViewController.swift in Sources */,
+				836A1CFF29C1BA1F002C568A /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
