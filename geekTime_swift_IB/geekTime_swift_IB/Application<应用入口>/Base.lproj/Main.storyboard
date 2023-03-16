@@ -21,9 +21,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="登录">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="VN3-Ns-ITR" kind="push" id="zvI-n7-9Lg"/>
+                                    <action selector="loginClick:" destination="owr-iK-GGx" eventType="touchUpInside" id="CEV-MM-HrX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,7 +44,7 @@
         <!--Login View Controller-->
         <scene sceneID="9cu-fi-30s">
             <objects>
-                <viewController id="VN3-Ns-ITR" customClass="LoginViewController" customModule="geekTime_swift_IB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VN3-Ns-ITR" customClass="LoginViewController" customModule="geekTime_swift_IB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RCA-O1-FKw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
