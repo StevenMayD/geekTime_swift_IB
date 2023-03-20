@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lU9-9V-KtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073.913043478261" y="43.526785714285715"/>
+            <point key="canvasLocation" x="822" y="44"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="9cu-fi-30s">
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTU-lt-kz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986" y="44"/>
+            <point key="canvasLocation" x="1474" y="44"/>
         </scene>
         <!--首页-->
         <scene sceneID="VEK-y6-xVw">
@@ -64,14 +64,44 @@
                     <view key="view" contentMode="scaleToFill" id="aTl-j8-r7e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2RO-6c-yMo">
+                                <rect key="frame" x="0.0" y="220" width="414" height="593"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jMV-RA-utK" id="ej4-y2-ads"/>
+                                    <outlet property="delegate" destination="jMV-RA-utK" id="SAy-kc-baY"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQX-vw-8QE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="176"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="oYI-0M-pyr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WFi-Oy-7Cj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2RO-6c-yMo" firstAttribute="leading" secondItem="WFi-Oy-7Cj" secondAttribute="leading" id="0f9-l0-VTg"/>
+                            <constraint firstItem="FQX-vw-8QE" firstAttribute="top" secondItem="WFi-Oy-7Cj" secondAttribute="top" id="1AH-c5-dCw"/>
+                            <constraint firstItem="FQX-vw-8QE" firstAttribute="leading" secondItem="WFi-Oy-7Cj" secondAttribute="leading" id="Ahk-Os-T1V"/>
+                            <constraint firstItem="2RO-6c-yMo" firstAttribute="top" secondItem="FQX-vw-8QE" secondAttribute="bottom" id="MAh-jy-vIA"/>
+                            <constraint firstItem="2RO-6c-yMo" firstAttribute="trailing" secondItem="WFi-Oy-7Cj" secondAttribute="trailing" id="aFl-R7-pan"/>
+                            <constraint firstItem="2RO-6c-yMo" firstAttribute="bottom" secondItem="WFi-Oy-7Cj" secondAttribute="bottom" id="b8z-Ct-bGM"/>
+                            <constraint firstItem="WFi-Oy-7Cj" firstAttribute="trailing" secondItem="FQX-vw-8QE" secondAttribute="trailing" id="dfX-gR-XKb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" image="home" selectedImage="home_selected" id="Orc-ep-30l"/>
+                    <connections>
+                        <outlet property="bannerBgView" destination="FQX-vw-8QE" id="bb6-av-15T"/>
+                        <outlet property="courseTableView" destination="2RO-6c-yMo" id="H7U-EM-iF2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZA-nz-QPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="-633"/>
+            <point key="canvasLocation" x="42.028985507246382" y="-731.25"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="nK5-Hr-Yba">
@@ -108,7 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZY-cI-vK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163.768115942029" y="43.526785714285715"/>
+            <point key="canvasLocation" x="43" y="44"/>
         </scene>
     </scenes>
     <resources>

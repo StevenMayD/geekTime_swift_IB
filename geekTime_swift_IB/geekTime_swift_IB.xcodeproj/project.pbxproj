@@ -19,9 +19,14 @@
 		836A1D0D29C1BD50002C568A /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0C29C1BD50002C568A /* MineViewController.swift */; };
 		836A1D0F29C1BD5D002C568A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0E29C1BD5D002C568A /* HomeViewController.swift */; };
 		836A1D1129C1D199002C568A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D1029C1D199002C568A /* BaseNavigationController.swift */; };
+		83ADB98629C47233008FA886 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADB98529C47233008FA886 /* FakeData.swift */; };
+		83DE250329C31E8900D849EB /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE250229C31E8900D849EB /* BannerView.swift */; };
+		B2599B2651DEBF96F354AA20 /* Pods_geekTime_swift_IB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD1B503C71B28224344A5D3 /* Pods_geekTime_swift_IB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DD1B503C71B28224344A5D3 /* Pods_geekTime_swift_IB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geekTime_swift_IB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19624F4C36D0711BEBAB2D4D /* Pods-geekTime_swift_IB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekTime_swift_IB.debug.xcconfig"; path = "Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB.debug.xcconfig"; sourceTree = "<group>"; };
 		836A1CBB29C1A689002C568A /* geekTime_swift_IB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geekTime_swift_IB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836A1CBE29C1A689002C568A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836A1CC029C1A689002C568A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		836A1D0C29C1BD50002C568A /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		836A1D0E29C1BD5D002C568A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		836A1D1029C1D199002C568A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		83ADB98529C47233008FA886 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		83DE250229C31E8900D849EB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		B2E803B30D9C3A957CEE640D /* Pods-geekTime_swift_IB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekTime_swift_IB.release.xcconfig"; path = "Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2599B2651DEBF96F354AA20 /* Pods_geekTime_swift_IB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C5C082031F04462B8C27F85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DD1B503C71B28224344A5D3 /* Pods_geekTime_swift_IB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A512BA32871BB18B8F69729 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19624F4C36D0711BEBAB2D4D /* Pods-geekTime_swift_IB.debug.xcconfig */,
+				B2E803B30D9C3A957CEE640D /* Pods-geekTime_swift_IB.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		836A1CB229C1A689002C568A = {
 			isa = PBXGroup;
 			children = (
 				836A1CBD29C1A689002C568A /* geekTime_swift_IB */,
 				836A1CBC29C1A689002C568A /* Products */,
+				7A512BA32871BB18B8F69729 /* Pods */,
+				3C5C082031F04462B8C27F85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				836A1D0E29C1BD5D002C568A /* HomeViewController.swift */,
+				83DE250229C31E8900D849EB /* BannerView.swift */,
+				83ADB98529C47233008FA886 /* FakeData.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -204,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 836A1CCF29C1A68B002C568A /* Build configuration list for PBXNativeTarget "geekTime_swift_IB" */;
 			buildPhases = (
+				D822BCF4B5A46E80ECAB4BC0 /* [CP] Check Pods Manifest.lock */,
 				836A1CB729C1A689002C568A /* Sources */,
 				836A1CB829C1A689002C568A /* Frameworks */,
 				836A1CB929C1A689002C568A /* Resources */,
+				47A9CD2A89321C8321FBA15C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,11 +296,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47A9CD2A89321C8321FBA15C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D822BCF4B5A46E80ECAB4BC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-geekTime_swift_IB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		836A1CB729C1A689002C568A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DE250329C31E8900D849EB /* BannerView.swift in Sources */,
 				836A1CBF29C1A689002C568A /* AppDelegate.swift in Sources */,
 				836A1CC129C1A689002C568A /* SceneDelegate.swift in Sources */,
 				836A1D0129C1BA33002C568A /* BaseModel.swift in Sources */,
@@ -276,6 +352,7 @@
 				836A1D1129C1D199002C568A /* BaseNavigationController.swift in Sources */,
 				836A1D0529C1BAE3002C568A /* MainViewController.swift in Sources */,
 				836A1D0329C1BA8D002C568A /* LoginViewController.swift in Sources */,
+				83ADB98629C47233008FA886 /* FakeData.swift in Sources */,
 				836A1CFF29C1BA1F002C568A /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +497,7 @@
 		};
 		836A1CD029C1A68B002C568A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19624F4C36D0711BEBAB2D4D /* Pods-geekTime_swift_IB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +526,7 @@
 		};
 		836A1CD129C1A68B002C568A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2E803B30D9C3A957CEE640D /* Pods-geekTime_swift_IB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
