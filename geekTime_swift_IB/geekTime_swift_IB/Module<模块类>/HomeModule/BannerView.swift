@@ -31,6 +31,7 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     var collectionView : UICollectionView
     var flowLayout : UICollectionViewFlowLayout // CollectionView布局属性配置
     var pageControl : UIPageControl // 声明小白点
+    var isInfinite : Bool = true // 是否无限轮播
     var timer : Timer? // 轮播计时器
     var autoScrollInterval : Float = 0 { // 轮播间隔
         didSet {
@@ -55,6 +56,13 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         didSet {
             pageControl.numberOfPages = self.dataSource.numberOfBanners(self) // 配置小白点数据
             collectionView.reloadData()
+            // 如果设置了无限轮播，因为收尾各添加了一个单元格，要初始定在真实的第一个banner的位置
+            if isInfinite {
+                // 主线程执行UI操作
+                DispatchQueue.main.async {
+                    self.collectionView.setContentOffset(CGPoint(x:self.collectionView.frame.width, y: 0), animated: false)
+                }
+            }
         }
     }
     
@@ -147,6 +155,17 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         // 当前页：round()舍入函数，得到整数值2.0；    Int()取整函数，得到整数2
         let currentPageNumber = Int(round(collectionView.contentOffset.x / collectionView.frame.width))
+        
+        if isInfinite {
+            // 无限轮播的情况下 下一页的处理：通过scrollViewDidEndScrollingAnimation 处理尾页滑动到首页的问题
+            let nextPageNumber = currentPageNumber + 1
+            collectionView.setContentOffset(CGPoint(x: collectionView.frame.width * CGFloat(nextPageNumber), y: 0), animated: true)
+            if nextPageNumber >= totalPageNumber + 1 {
+                pageControl.currentPage = 0
+            } else {
+                pageControl.currentPage = nextPageNumber - 1
+            }
+        } else {
         // 下一页
         var nextPageNumer = currentPageNumber + 1
         if nextPageNumer >= totalPageNumber {
@@ -155,13 +174,32 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         // 滚动视图翻至下一页
         collectionView.setContentOffset(CGPoint(x: collectionView.frame.width * CGFloat(nextPageNumer), y: 0), animated: true)
         pageControl.currentPage = nextPageNumer
+        }
     }
     
     // MARK: --- UICollectionViewDataSource
     // 单元格内容
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerView.cellId, for: indexPath)
-        let index = indexPath.row
+        // 取资源的索引（正常情况：从资源数组获取资源的索引 = 单元格的索引）
+        var index = indexPath.row
+        
+        // 无限轮播时：从资源数组获取资源的索引 = 单元格的所以后≠
+        if isInfinite {
+            let pageNumber = dataSource.numberOfBanners(self) // banner数目
+            if pageNumber > 1 {
+                if indexPath.row == 0 {
+                    // 如果当前单元格为第0个 那么index应该为数据源的最后一个
+                    index = pageNumber - 1
+                } else if indexPath.row == pageNumber+1 {
+                    // 如果当前单元格为最后一个 那么index应该为数据源的第一个
+                    index = 0
+                } else {
+                    // 非首尾的单元格 取资源的索引为 单元格索引-1（因为单元格的数目比资源的数目多了2）
+                    index = indexPath.row - 1
+                }
+            }
+        }
         
         if let view = cell.contentView.viewWithTag(BannerView.contentViewTag) {
             // 可重用的view存在
@@ -181,14 +219,33 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     // 每节的单元格数量
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 协议numberOfBanners调用numberOfBanners方法 获得单元格数量
-        return dataSource.numberOfBanners(self)
+        let pageNumber = dataSource.numberOfBanners(self)
+        if isInfinite {
+            if pageNumber == 1 {
+                return 1
+            } else {
+                // 无限轮播的单元格数：需要在收尾各添加一张，从而使从尾到首 无感知
+                return pageNumber + 2
+            }
+        } else {
+            return pageNumber
+        }
     }
     
     // 节的数量
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     // MARK: --- UICollectionViewDelegate
+    // 滚动细节处理：当滑动到最后一页 继续滑下一页时 使滚动到第0页
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        let total = dataSource.numberOfBanners(self)
+        let current = Int(round(collectionView.contentOffset.x / collectionView.frame.width))
+        if current >= total + 1 {
+            collectionView.setContentOffset(CGPoint(x: collectionView.frame.width, y: 0), animated: false) // 不带动画的硬切换 使用户无察觉从尾格到首格
+        }
+    }
     
     // MARK: --- UICollectionViewFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

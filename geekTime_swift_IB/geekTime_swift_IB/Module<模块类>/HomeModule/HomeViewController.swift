@@ -68,6 +68,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     func loadBannerView() {
         let bannerView = BannerView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 176))
         bannerView.dataSource = self
+        bannerView.isInfinite = true
         bannerView.autoScrollInterval = 3 // 3秒轮播间隔
         bannerBgView.addSubview(bannerView)
     }
