@@ -28,13 +28,16 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
      */
     var collectionView : UICollectionView
     var flowLayout : UICollectionViewFlowLayout // CollectionView布局属性配置
+    var pageControl : UIPageControl // 声明小白点
     static var cellId = "bannerViewCellId"
     static var contentViewTag = 10086
     
     // 两个协议类型的属性
     var delegate: BannerViewDelegate?
     var dataSource: BannerViewDataSource! {
-        didSet { // 监听器：监听dataSource有被赋值 则触发加载collectionView
+        // 属性观察者：监听dataSource被设置了 则触发加载collectionView
+        didSet {
+            pageControl.numberOfPages = self.dataSource.numberOfBanners(self) // 配置小白点数据
             collectionView.reloadData()
         }
     }
@@ -43,7 +46,7 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     /**
      方法列表
      */
-    // 界面初始化
+    // 界面初始化：属性创建
     override init(frame: CGRect) {
         // 属性不在self.使用
         flowLayout = UICollectionViewFlowLayout()
@@ -57,6 +60,7 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         let collectionViewFrame = CGRect(x: 0, y: 0,
                                          width: frame.width, height: frame.height)
         collectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: flowLayout)
+        pageControl = UIPageControl() // 创建小白点
         
         super.init(frame: frame)
         // 调用父类方法之后 才能定义布局自己的界面
@@ -80,10 +84,15 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         // 布局collectionView：父视图先添加 才能以父视图自动布局,否则报错
         self.addSubview(collectionView)
+        self.addSubview(pageControl) // 添加小白点
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
+        // 布局小白点
+        pageControl.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().offset(8)
+        }
         
     }
     
