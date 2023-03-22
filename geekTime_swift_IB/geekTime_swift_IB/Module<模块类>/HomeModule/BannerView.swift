@@ -238,12 +238,39 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     // MARK: --- UICollectionViewDelegate
-    // 滚动细节处理：当滑动到最后一页 继续滑下一页时 使滚动到第0页
+    /* scrollViewDidEndScrollingAnimation 触发时机：本例中由定时器 调用setContentOffset
+     必须是使用setContentOffset:animated:方法或者scrollRectVisible:animated:方法让scrollView方法的产生的滚动动画，在动画结束的时候会调用
+     
+     滑动细节处理：定时器切换setContentOffset 触发的滑动操作结束时，处理轮播定格图片和小白点位置
+     */
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         let total = dataSource.numberOfBanners(self)
         let current = Int(round(collectionView.contentOffset.x / collectionView.frame.width))
+        // 定时器控制的自动轮播，只有顺向滚动
         if current >= total + 1 {
             collectionView.setContentOffset(CGPoint(x: collectionView.frame.width, y: 0), animated: false) // 不带动画的硬切换 使用户无察觉从尾格到首格
+        }
+    }
+    
+    /*  scrollViewDidEndDecelerating 触发时机：手动滑动collectionView
+     必须人为拖拽scrollView产生的滚动动画,动画结束会调用
+     
+     滑动细节处理：手滑 触发的滑动操作结束时，处理轮播定格图片和小白点位置
+     */
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let total = dataSource.numberOfBanners(self)
+        let current = Int(round(collectionView.contentOffset.x / collectionView.frame.width))
+        if current >= total + 1 {
+            // 处理顺向手滑到最后一页，继续顺向下滑到第一页
+            collectionView.setContentOffset(CGPoint(x: collectionView.frame.width, y: 0), animated: false) // 滑动到第一页
+            pageControl.currentPage = 0 // 小白点位置为第一个
+        } else if current == 0 {
+            // 处理逆向手滑到最后一页，继续逆向上滑到最后一页
+            collectionView.setContentOffset(CGPoint(x: Int(collectionView.frame.width)*total, y: 0), animated: false) // 滑动到最后一页
+            pageControl.currentPage = total - 1 // 小白点位置为最后一个
+        } else {
+            // 小白点正常位置为当前页数-1
+            pageControl.currentPage = current - 1
         }
     }
     
