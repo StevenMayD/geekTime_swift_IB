@@ -65,14 +65,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2RO-6c-yMo">
-                                <rect key="frame" x="0.0" y="220" width="414" height="593"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="jMV-RA-utK" id="ej4-y2-ads"/>
-                                    <outlet property="delegate" destination="jMV-RA-utK" id="SAy-kc-baY"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQX-vw-8QE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="176"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,23 +72,27 @@
                                     <constraint firstAttribute="height" constant="176" id="oYI-0M-pyr"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-B7-Y7g">
+                                <rect key="frame" x="0.0" y="220" width="414" height="593"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WFi-Oy-7Cj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2RO-6c-yMo" firstAttribute="leading" secondItem="WFi-Oy-7Cj" secondAttribute="leading" id="0f9-l0-VTg"/>
                             <constraint firstItem="FQX-vw-8QE" firstAttribute="top" secondItem="WFi-Oy-7Cj" secondAttribute="top" id="1AH-c5-dCw"/>
+                            <constraint firstItem="Aog-B7-Y7g" firstAttribute="top" secondItem="FQX-vw-8QE" secondAttribute="bottom" id="8BB-nR-XdM"/>
                             <constraint firstItem="FQX-vw-8QE" firstAttribute="leading" secondItem="WFi-Oy-7Cj" secondAttribute="leading" id="Ahk-Os-T1V"/>
-                            <constraint firstItem="2RO-6c-yMo" firstAttribute="top" secondItem="FQX-vw-8QE" secondAttribute="bottom" id="MAh-jy-vIA"/>
-                            <constraint firstItem="2RO-6c-yMo" firstAttribute="trailing" secondItem="WFi-Oy-7Cj" secondAttribute="trailing" id="aFl-R7-pan"/>
-                            <constraint firstItem="2RO-6c-yMo" firstAttribute="bottom" secondItem="WFi-Oy-7Cj" secondAttribute="bottom" id="b8z-Ct-bGM"/>
+                            <constraint firstItem="Aog-B7-Y7g" firstAttribute="leading" secondItem="WFi-Oy-7Cj" secondAttribute="leading" id="Owh-yK-BGI"/>
+                            <constraint firstItem="WFi-Oy-7Cj" firstAttribute="trailing" secondItem="Aog-B7-Y7g" secondAttribute="trailing" id="c1x-kc-Z21"/>
                             <constraint firstItem="WFi-Oy-7Cj" firstAttribute="trailing" secondItem="FQX-vw-8QE" secondAttribute="trailing" id="dfX-gR-XKb"/>
+                            <constraint firstItem="WFi-Oy-7Cj" firstAttribute="bottom" secondItem="Aog-B7-Y7g" secondAttribute="bottom" id="hms-D6-I1q"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" image="home" selectedImage="home_selected" id="Orc-ep-30l"/>
                     <connections>
                         <outlet property="bannerBgView" destination="FQX-vw-8QE" id="bb6-av-15T"/>
-                        <outlet property="courseTableView" destination="2RO-6c-yMo" id="H7U-EM-iF2"/>
+                        <outlet property="courseTableBgView" destination="Aog-B7-Y7g" id="0Ee-7x-rQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZA-nz-QPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,6 +144,9 @@
         <image name="mine_selected" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

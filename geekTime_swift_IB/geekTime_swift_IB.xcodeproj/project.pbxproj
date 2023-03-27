@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8359F48D29CD9DB000F3B0FB /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8359F48C29CD9DB000F3B0FB /* Course.swift */; };
+		8359F48F29CD9DF600F3B0FB /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8359F48E29CD9DF600F3B0FB /* CourseView.swift */; };
+		8359F49329CDA5F100F3B0FB /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8359F49229CDA5F100F3B0FB /* CommonTableViewCell.swift */; };
+		8359F49529CDA79C00F3B0FB /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8359F49429CDA79C00F3B0FB /* CourseTableViewCell.swift */; };
 		836A1CBF29C1A689002C568A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1CBE29C1A689002C568A /* AppDelegate.swift */; };
 		836A1CC129C1A689002C568A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1CC029C1A689002C568A /* SceneDelegate.swift */; };
 		836A1CC629C1A689002C568A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836A1CC429C1A689002C568A /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 /* Begin PBXFileReference section */
 		0DD1B503C71B28224344A5D3 /* Pods_geekTime_swift_IB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geekTime_swift_IB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19624F4C36D0711BEBAB2D4D /* Pods-geekTime_swift_IB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekTime_swift_IB.debug.xcconfig"; path = "Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB.debug.xcconfig"; sourceTree = "<group>"; };
+		8359F48C29CD9DB000F3B0FB /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		8359F48E29CD9DF600F3B0FB /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		8359F49229CDA5F100F3B0FB /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		8359F49429CDA79C00F3B0FB /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		836A1CBB29C1A689002C568A /* geekTime_swift_IB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geekTime_swift_IB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836A1CBE29C1A689002C568A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836A1CC029C1A689002C568A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +80,41 @@
 				19624F4C36D0711BEBAB2D4D /* Pods-geekTime_swift_IB.debug.xcconfig */,
 				B2E803B30D9C3A957CEE640D /* Pods-geekTime_swift_IB.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8359F48629CD8EAF00F3B0FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8359F48C29CD9DB000F3B0FB /* Course.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8359F48929CD9D0C00F3B0FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83DE250229C31E8900D849EB /* BannerView.swift */,
+				8359F48E29CD9DF600F3B0FB /* CourseView.swift */,
+				8359F49429CDA79C00F3B0FB /* CourseTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8359F49029CD9F4D00F3B0FB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				836A1D0E29C1BD5D002C568A /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8359F49129CDA5C700F3B0FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8359F49229CDA5F100F3B0FB /* CommonTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		836A1CB229C1A689002C568A = {
@@ -98,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				836A1CF629C1B76E002C568A /* Module<模块类> */,
-				836A1CF729C1B7BC002C568A /* Component<组件类> */,
+				836A1CF729C1B7BC002C568A /* Common<公共类> */,
 				836A1CF529C1B763002C568A /* Tools<工具类> */,
 				836A1CF429C1B743002C568A /* Extensions<扩展类> */,
 				836A1CF329C1B615002C568A /* Resource<资源类> */,
@@ -149,11 +190,13 @@
 			path = "Module<模块类>";
 			sourceTree = "<group>";
 		};
-		836A1CF729C1B7BC002C568A /* Component<组件类> */ = {
+		836A1CF729C1B7BC002C568A /* Common<公共类> */ = {
 			isa = PBXGroup;
 			children = (
+				8359F49129CDA5C700F3B0FB /* View */,
+				83ADB98529C47233008FA886 /* FakeData.swift */,
 			);
-			path = "Component<组件类>";
+			path = "Common<公共类>";
 			sourceTree = "<group>";
 		};
 		836A1CF829C1B7EA002C568A /* MainModule */ = {
@@ -212,9 +255,9 @@
 		836A1D0629C1BAF7002C568A /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
-				836A1D0E29C1BD5D002C568A /* HomeViewController.swift */,
-				83DE250229C31E8900D849EB /* BannerView.swift */,
-				83ADB98529C47233008FA886 /* FakeData.swift */,
+				8359F49029CD9F4D00F3B0FB /* ViewController */,
+				8359F48929CD9D0C00F3B0FB /* View */,
+				8359F48629CD8EAF00F3B0FB /* Model */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -344,16 +387,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DE250329C31E8900D849EB /* BannerView.swift in Sources */,
+				8359F48F29CD9DF600F3B0FB /* CourseView.swift in Sources */,
+				8359F49329CDA5F100F3B0FB /* CommonTableViewCell.swift in Sources */,
 				836A1CBF29C1A689002C568A /* AppDelegate.swift in Sources */,
 				836A1CC129C1A689002C568A /* SceneDelegate.swift in Sources */,
 				836A1D0129C1BA33002C568A /* BaseModel.swift in Sources */,
 				836A1D0F29C1BD5D002C568A /* HomeViewController.swift in Sources */,
 				836A1D0D29C1BD50002C568A /* MineViewController.swift in Sources */,
+				8359F48D29CD9DB000F3B0FB /* Course.swift in Sources */,
 				836A1D1129C1D199002C568A /* BaseNavigationController.swift in Sources */,
 				836A1D0529C1BAE3002C568A /* MainViewController.swift in Sources */,
 				836A1D0329C1BA8D002C568A /* LoginViewController.swift in Sources */,
 				83ADB98629C47233008FA886 /* FakeData.swift in Sources */,
 				836A1CFF29C1BA1F002C568A /* BaseViewController.swift in Sources */,
+				8359F49529CDA79C00F3B0FB /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

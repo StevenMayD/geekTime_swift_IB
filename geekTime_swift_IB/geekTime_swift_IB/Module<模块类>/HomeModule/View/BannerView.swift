@@ -21,7 +21,9 @@ protocol BannerViewDelegate : AnyObject { // 操作点击回调相关
     func didSelectBanner(_ banner: BannerView, index: Int)
 }
 
-/** 滚动视图（由UICollectionView实现） */
+/** 滚动视图（由UICollectionView实现）
+    父类为UIView，遵循UICollectionViewDataSource, 等协议
+ */
 class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     /**
      属性列表：不再需要property描述
@@ -272,6 +274,10 @@ class BannerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
             // 小白点正常位置为当前页数-1
             pageControl.currentPage = current - 1
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectBanner(self, index: indexPath.row)
     }
     
     // MARK: --- UICollectionViewFlowLayout
