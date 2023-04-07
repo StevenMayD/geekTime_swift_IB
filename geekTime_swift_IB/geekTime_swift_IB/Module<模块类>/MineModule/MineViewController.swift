@@ -15,6 +15,14 @@ class MineViewController: BaseViewController {
         initData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 设置导航栏 标题字体颜色
+        self.navigationController?.navigationBar.titleTextAttributes =
+        [NSAttributedString.Key.foregroundColor: UIColor.red]
+    }
+    
     func loadViewUI() {
         // 设置标题
         self.title = "我的"

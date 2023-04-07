@@ -23,6 +23,11 @@
 		836A1D0D29C1BD50002C568A /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0C29C1BD50002C568A /* MineViewController.swift */; };
 		836A1D0F29C1BD5D002C568A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D0E29C1BD5D002C568A /* HomeViewController.swift */; };
 		836A1D1129C1D199002C568A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A1D1029C1D199002C568A /* BaseNavigationController.swift */; };
+		83ABA9F029E008100061D667 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA9EF29E008100061D667 /* logo@2x.png */; };
+		83ABA9F329E009F20061D667 /* icon_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA9F129E009F20061D667 /* icon_phone@2x.png */; };
+		83ABA9F429E009F20061D667 /* icon_pwd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ABA9F229E009F20061D667 /* icon_pwd@2x.png */; };
+		83ABA9F829E00E750061D667 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA9F729E00E750061D667 /* R.generated.swift */; };
+		83ABA9FA29E013850061D667 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABA9F929E013850061D667 /* UIColorExtension.swift */; };
 		83ADB98629C47233008FA886 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ADB98529C47233008FA886 /* FakeData.swift */; };
 		83DE250329C31E8900D849EB /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE250229C31E8900D849EB /* BannerView.swift */; };
 		B2599B2651DEBF96F354AA20 /* Pods_geekTime_swift_IB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD1B503C71B28224344A5D3 /* Pods_geekTime_swift_IB.framework */; };
@@ -49,6 +54,11 @@
 		836A1D0C29C1BD50002C568A /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		836A1D0E29C1BD5D002C568A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		836A1D1029C1D199002C568A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		83ABA9EF29E008100061D667 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		83ABA9F129E009F20061D667 /* icon_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_phone@2x.png"; sourceTree = "<group>"; };
+		83ABA9F229E009F20061D667 /* icon_pwd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_pwd@2x.png"; sourceTree = "<group>"; };
+		83ABA9F729E00E750061D667 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		83ABA9F929E013850061D667 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		83ADB98529C47233008FA886 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		83DE250229C31E8900D849EB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		B2E803B30D9C3A957CEE640D /* Pods-geekTime_swift_IB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geekTime_swift_IB.release.xcconfig"; path = "Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +170,9 @@
 		836A1CF329C1B615002C568A /* Resource<资源类> */ = {
 			isa = PBXGroup;
 			children = (
+				83ABA9EF29E008100061D667 /* logo@2x.png */,
+				83ABA9F129E009F20061D667 /* icon_phone@2x.png */,
+				83ABA9F229E009F20061D667 /* icon_pwd@2x.png */,
 				836A1CC729C1A68B002C568A /* Assets.xcassets */,
 			);
 			path = "Resource<资源类>";
@@ -168,6 +181,7 @@
 		836A1CF429C1B743002C568A /* Extensions<扩展类> */ = {
 			isa = PBXGroup;
 			children = (
+				83ABA9F929E013850061D667 /* UIColorExtension.swift */,
 			);
 			path = "Extensions<扩展类>";
 			sourceTree = "<group>";
@@ -175,6 +189,7 @@
 		836A1CF529C1B763002C568A /* Tools<工具类> */ = {
 			isa = PBXGroup;
 			children = (
+				83ABA9F629E00E4F0061D667 /* ResourceManage */,
 			);
 			path = "Tools<工具类>";
 			sourceTree = "<group>";
@@ -271,6 +286,14 @@
 			path = MineModule;
 			sourceTree = "<group>";
 		};
+		83ABA9F629E00E4F0061D667 /* ResourceManage */ = {
+			isa = PBXGroup;
+			children = (
+				83ABA9F729E00E750061D667 /* R.generated.swift */,
+			);
+			path = ResourceManage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,6 +302,7 @@
 			buildConfigurationList = 836A1CCF29C1A68B002C568A /* Build configuration list for PBXNativeTarget "geekTime_swift_IB" */;
 			buildPhases = (
 				D822BCF4B5A46E80ECAB4BC0 /* [CP] Check Pods Manifest.lock */,
+				83ABA9F529E00C780061D667 /* ShellScript */,
 				836A1CB729C1A689002C568A /* Sources */,
 				836A1CB829C1A689002C568A /* Frameworks */,
 				836A1CB929C1A689002C568A /* Resources */,
@@ -332,8 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				836A1CCB29C1A68B002C568A /* LaunchScreen.storyboard in Resources */,
+				83ABA9F029E008100061D667 /* logo@2x.png in Resources */,
 				836A1CC829C1A68B002C568A /* Assets.xcassets in Resources */,
 				836A1CC629C1A689002C568A /* Main.storyboard in Resources */,
+				83ABA9F329E009F20061D667 /* icon_phone@2x.png in Resources */,
+				83ABA9F429E009F20061D667 /* icon_pwd@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +383,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-geekTime_swift_IB/Pods-geekTime_swift_IB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		83ABA9F529E00C780061D667 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		D822BCF4B5A46E80ECAB4BC0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -386,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ABA9FA29E013850061D667 /* UIColorExtension.swift in Sources */,
 				83DE250329C31E8900D849EB /* BannerView.swift in Sources */,
 				8359F48F29CD9DF600F3B0FB /* CourseView.swift in Sources */,
 				8359F49329CDA5F100F3B0FB /* CommonTableViewCell.swift in Sources */,
@@ -397,6 +445,7 @@
 				8359F48D29CD9DB000F3B0FB /* Course.swift in Sources */,
 				836A1D1129C1D199002C568A /* BaseNavigationController.swift in Sources */,
 				836A1D0529C1BAE3002C568A /* MainViewController.swift in Sources */,
+				83ABA9F829E00E750061D667 /* R.generated.swift in Sources */,
 				836A1D0329C1BA8D002C568A /* LoginViewController.swift in Sources */,
 				83ADB98629C47233008FA886 /* FakeData.swift in Sources */,
 				836A1CFF29C1BA1F002C568A /* BaseViewController.swift in Sources */,
