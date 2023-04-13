@@ -16,30 +16,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-Jy-JoK">
-                                <rect key="frame" x="171.5" y="427.5" width="71" height="41.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="登录">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="loginClick:" destination="owr-iK-GGx" eventType="touchUpInside" id="CEV-MM-HrX"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zjs-rd-HfM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="160"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAvatar.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTF-EM-arb">
+                                        <rect key="frame" x="20" y="20" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="CM9-NW-9ZF"/>
+                                            <constraint firstAttribute="height" constant="120" id="GFv-ZQ-HdY"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-Jy-JoK">
+                                        <rect key="frame" x="160" y="20" width="100" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="iqh-cY-Rgr"/>
+                                            <constraint firstAttribute="height" constant="40" id="pW2-FN-zj6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="点击登录">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginClick:" destination="owr-iK-GGx" eventType="touchUpInside" id="CEV-MM-HrX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="MTF-EM-arb" firstAttribute="top" secondItem="Zjs-rd-HfM" secondAttribute="top" constant="20" id="Gu1-Ag-Thg"/>
+                                    <constraint firstItem="aiQ-Jy-JoK" firstAttribute="leading" secondItem="MTF-EM-arb" secondAttribute="trailing" constant="20" id="IoP-k4-285"/>
+                                    <constraint firstItem="aiQ-Jy-JoK" firstAttribute="top" secondItem="Zjs-rd-HfM" secondAttribute="top" constant="20" id="XFW-8f-F5q"/>
+                                    <constraint firstItem="MTF-EM-arb" firstAttribute="leading" secondItem="Zjs-rd-HfM" secondAttribute="leading" constant="20" id="rk8-9j-7tF"/>
+                                    <constraint firstAttribute="height" constant="160" id="xJ9-kr-Rub"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-Dg-nRO">
+                                <rect key="frame" x="0.0" y="248" width="414" height="565"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3TT-gk-g3w"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aiQ-Jy-JoK" firstAttribute="centerX" secondItem="Alc-on-gMM" secondAttribute="centerX" id="MfM-7Z-7Wm"/>
-                            <constraint firstItem="aiQ-Jy-JoK" firstAttribute="centerY" secondItem="Alc-on-gMM" secondAttribute="centerY" id="hCK-rM-wpu"/>
+                            <constraint firstItem="9Pw-Dg-nRO" firstAttribute="top" secondItem="Zjs-rd-HfM" secondAttribute="bottom" id="7T4-ju-Te5"/>
+                            <constraint firstItem="9Pw-Dg-nRO" firstAttribute="leading" secondItem="3TT-gk-g3w" secondAttribute="leading" id="PH3-QU-cXE"/>
+                            <constraint firstItem="3TT-gk-g3w" firstAttribute="trailing" secondItem="9Pw-Dg-nRO" secondAttribute="trailing" id="RQ5-3h-qHC"/>
+                            <constraint firstItem="3TT-gk-g3w" firstAttribute="bottom" secondItem="9Pw-Dg-nRO" secondAttribute="bottom" id="Vhb-4u-MeM"/>
+                            <constraint firstItem="Zjs-rd-HfM" firstAttribute="leading" secondItem="3TT-gk-g3w" secondAttribute="leading" id="WNk-Kx-tzL"/>
+                            <constraint firstItem="Zjs-rd-HfM" firstAttribute="top" secondItem="3TT-gk-g3w" secondAttribute="top" id="bx4-CR-dXh"/>
+                            <constraint firstItem="3TT-gk-g3w" firstAttribute="trailing" secondItem="Zjs-rd-HfM" secondAttribute="trailing" id="pvL-DA-u6n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZGH-pm-lgb"/>
+                    <connections>
+                        <outlet property="tableBgView" destination="9Pw-Dg-nRO" id="zXn-Gt-gER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lU9-9V-KtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691" y="-48"/>
+            <point key="canvasLocation" x="752" y="12"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="9cu-fi-30s">
@@ -106,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTU-lt-kz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="-102"/>
+            <point key="canvasLocation" x="1472" y="-48"/>
         </scene>
         <!--首页-->
         <scene sceneID="VEK-y6-xVw">
@@ -189,6 +231,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="defaultAvatar.jpg" width="119" height="119"/>
         <image name="home" width="24" height="24"/>
         <image name="home_selected" width="24" height="24"/>
         <image name="logo.png" width="151" height="38"/>
@@ -199,6 +242,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -139,14 +139,80 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 3 files.
+  /// This `R.file` struct is generated, and contains static references to 12 files.
   struct file {
+    /// Resource file `defaultAvatar@2x.jpg`.
+    static let defaultAvatar2xJpg = Rswift.FileResource(bundle: R.hostingBundle, name: "defaultAvatar@2x", pathExtension: "jpg")
+    /// Resource file `icon_between@2x.png`.
+    static let icon_between2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_between@2x", pathExtension: "png")
+    /// Resource file `icon_cal@2x.png`.
+    static let icon_cal2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_cal@2x", pathExtension: "png")
+    /// Resource file `icon_column@2x.png`.
+    static let icon_column2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_column@2x", pathExtension: "png")
+    /// Resource file `icon_course@2x.png`.
+    static let icon_course2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_course@2x", pathExtension: "png")
+    /// Resource file `icon_document@2x.png`.
+    static let icon_document2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_document@2x", pathExtension: "png")
+    /// Resource file `icon_life@2x.png`.
+    static let icon_life2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_life@2x", pathExtension: "png")
+    /// Resource file `icon_live@2x.png`.
+    static let icon_live2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_live@2x", pathExtension: "png")
     /// Resource file `icon_phone@2x.png`.
     static let icon_phone2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_phone@2x", pathExtension: "png")
     /// Resource file `icon_pwd@2x.png`.
     static let icon_pwd2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_pwd@2x", pathExtension: "png")
+    /// Resource file `icon_right_arrow@2x.png`.
+    static let icon_right_arrow2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "icon_right_arrow@2x", pathExtension: "png")
     /// Resource file `logo@2x.png`.
     static let logo2xPng = Rswift.FileResource(bundle: R.hostingBundle, name: "logo@2x", pathExtension: "png")
+
+    /// `bundle.url(forResource: "defaultAvatar@2x", withExtension: "jpg")`
+    static func defaultAvatar2xJpg(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.defaultAvatar2xJpg
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon_between@2x", withExtension: "png")`
+    static func icon_between2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_between2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon_cal@2x", withExtension: "png")`
+    static func icon_cal2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_cal2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon_column@2x", withExtension: "png")`
+    static func icon_column2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_column2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon_course@2x", withExtension: "png")`
+    static func icon_course2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_course2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon_document@2x", withExtension: "png")`
+    static func icon_document2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_document2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon_life@2x", withExtension: "png")`
+    static func icon_life2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_life2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon_live@2x", withExtension: "png")`
+    static func icon_live2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_live2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
 
     /// `bundle.url(forResource: "icon_phone@2x", withExtension: "png")`
     static func icon_phone2xPng(_: Void = ()) -> Foundation.URL? {
@@ -160,6 +226,12 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
 
+    /// `bundle.url(forResource: "icon_right_arrow@2x", withExtension: "png")`
+    static func icon_right_arrow2xPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon_right_arrow2xPng
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
     /// `bundle.url(forResource: "logo@2x", withExtension: "png")`
     static func logo2xPng(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.logo2xPng
@@ -169,22 +241,47 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 7 images.
+  /// This `R.image` struct is generated, and contains static references to 16 images.
   struct image {
+    /// Image `defaultAvatar.jpg`.
+    static let defaultAvatarJpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "defaultAvatar.jpg")
     /// Image `home_selected`.
     static let home_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_selected")
     /// Image `home`.
     static let home = Rswift.ImageResource(bundle: R.hostingBundle, name: "home")
+    /// Image `icon_between`.
+    static let icon_between = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_between")
+    /// Image `icon_cal`.
+    static let icon_cal = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cal")
+    /// Image `icon_column`.
+    static let icon_column = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_column")
+    /// Image `icon_course`.
+    static let icon_course = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_course")
+    /// Image `icon_document`.
+    static let icon_document = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_document")
+    /// Image `icon_life`.
+    static let icon_life = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_life")
+    /// Image `icon_live`.
+    static let icon_live = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_live")
     /// Image `icon_phone`.
     static let icon_phone = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_phone")
     /// Image `icon_pwd`.
     static let icon_pwd = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_pwd")
+    /// Image `icon_right_arrow`.
+    static let icon_right_arrow = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_right_arrow")
     /// Image `logo`.
     static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo")
     /// Image `mine_selected`.
     static let mine_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_selected")
     /// Image `mine`.
     static let mine = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "defaultAvatar.jpg", bundle: ..., traitCollection: ...)`
+    static func defaultAvatarJpg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.defaultAvatarJpg, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "home", bundle: ..., traitCollection: ...)`
@@ -201,6 +298,55 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_between", bundle: ..., traitCollection: ...)`
+    static func icon_between(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_between, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_cal", bundle: ..., traitCollection: ...)`
+    static func icon_cal(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_cal, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_column", bundle: ..., traitCollection: ...)`
+    static func icon_column(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_column, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_course", bundle: ..., traitCollection: ...)`
+    static func icon_course(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_course, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_document", bundle: ..., traitCollection: ...)`
+    static func icon_document(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_document, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_life", bundle: ..., traitCollection: ...)`
+    static func icon_life(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_life, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_live", bundle: ..., traitCollection: ...)`
+    static func icon_live(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_live, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_phone", bundle: ..., traitCollection: ...)`
     static func icon_phone(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_phone, compatibleWith: traitCollection)
@@ -211,6 +357,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_pwd", bundle: ..., traitCollection: ...)`
     static func icon_pwd(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_pwd, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_right_arrow", bundle: ..., traitCollection: ...)`
+    static func icon_right_arrow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_right_arrow, compatibleWith: traitCollection)
     }
     #endif
 
@@ -329,6 +482,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "defaultAvatar.jpg", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'defaultAvatar.jpg' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "home", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "home_selected", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home_selected' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "logo.png", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo.png' is used in storyboard 'Main', but couldn't be loaded.") }

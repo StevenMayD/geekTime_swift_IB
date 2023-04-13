@@ -8,6 +8,12 @@
 import UIKit
 
 class MineViewController: BaseViewController {
+    @IBOutlet weak var tableBgView: UIView!
+    var accountCell : CommonCellView!
+    var purchasedCell : CommonCellView!
+    var orderCell : CommonCellView!
+    var groupCell : CommonCellView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +38,9 @@ class MineViewController: BaseViewController {
 //        self.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
         // 跳转时隐藏tabbar (不是在这里设置 这样会让切换tab时 也隐藏tab栏，而是在跳转去向 比如loginVC那里设置)
 //        self.hidesBottomBarWhenPushed = true
-    
+        
+        loadTableView();
+        
     }
     
     func initData() {
@@ -46,5 +54,45 @@ class MineViewController: BaseViewController {
         self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
-
+    func loadTableView () {
+        accountCell = CommonCellView()
+        accountCell.icon = R.image.icon_life()
+        accountCell.title = "账号"
+        tableBgView.addSubview(accountCell)
+        accountCell.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(10)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(45)
+        }
+        
+        purchasedCell = CommonCellView()
+        purchasedCell.icon = R.image.icon_between()
+        purchasedCell.title = "已购"
+        tableBgView.addSubview(purchasedCell)
+        purchasedCell.snp.makeConstraints { make in
+            make.top.equalTo(accountCell.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(45)
+        }
+        
+        orderCell = CommonCellView()
+        orderCell.icon = R.image.icon_document()
+        orderCell.title = "商品订单"
+        tableBgView.addSubview(orderCell)
+        orderCell.snp.makeConstraints { make in
+            make.top.equalTo(purchasedCell.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(45)
+        }
+        
+        groupCell =  CommonCellView()
+        groupCell.icon = R.image.icon_live()
+        groupCell.title = "我的拼团"
+        tableBgView.addSubview(groupCell)
+        groupCell.snp.makeConstraints { make in
+            make.top.equalTo(orderCell.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(45)
+        }
+    }
 }
